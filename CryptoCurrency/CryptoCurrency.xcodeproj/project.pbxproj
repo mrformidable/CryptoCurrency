@@ -12,8 +12,12 @@
 		4C3899FC20EF29E900E89E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3899FA20EF29E900E89E51 /* Main.storyboard */; };
 		4C3899FE20EF29E900E89E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3899FD20EF29E900E89E51 /* Assets.xcassets */; };
 		4C389A0120EF29E900E89E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3899FF20EF29E900E89E51 /* LaunchScreen.storyboard */; };
-		4C389A0C20EF29E900E89E51 /* CryptoCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A0B20EF29E900E89E51 /* CryptoCurrencyTests.swift */; };
 		4C389A1720EF29E900E89E51 /* CryptoCurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A1620EF29E900E89E51 /* CryptoCurrencyUITests.swift */; };
+		4C389A2820EF2AE500E89E51 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A2720EF2AE500E89E51 /* Currency.swift */; };
+		4C389A2A20EF2E8400E89E51 /* CurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A2920EF2E8400E89E51 /* CurrencyViewModel.swift */; };
+		4C389A2C20EF2EC900E89E51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A2B20EF2EC900E89E51 /* NetworkService.swift */; };
+		4C389A2E20EF31FF00E89E51 /* CurrencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A2D20EF31FF00E89E51 /* CurrencyFactory.swift */; };
+		4C389A3020EF34AE00E89E51 /* CurrencyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C389A2F20EF34AE00E89E51 /* CurrencyViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +46,15 @@
 		4C389A0020EF29E900E89E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C389A0220EF29E900E89E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C389A0720EF29E900E89E51 /* CryptoCurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C389A0B20EF29E900E89E51 /* CryptoCurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyTests.swift; sourceTree = "<group>"; };
 		4C389A0D20EF29E900E89E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C389A1220EF29E900E89E51 /* CryptoCurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C389A1620EF29E900E89E51 /* CryptoCurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyUITests.swift; sourceTree = "<group>"; };
 		4C389A1820EF29E900E89E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C389A2720EF2AE500E89E51 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		4C389A2920EF2E8400E89E51 /* CurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModel.swift; sourceTree = "<group>"; };
+		4C389A2B20EF2EC900E89E51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4C389A2D20EF31FF00E89E51 /* CurrencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFactory.swift; sourceTree = "<group>"; };
+		4C389A2F20EF34AE00E89E51 /* CurrencyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				4C3899F620EF29E900E89E51 /* AppDelegate.swift */,
 				4C3899F820EF29E900E89E51 /* ViewController.swift */,
+				4C389A2720EF2AE500E89E51 /* Currency.swift */,
+				4C389A2920EF2E8400E89E51 /* CurrencyViewModel.swift */,
+				4C389A2D20EF31FF00E89E51 /* CurrencyFactory.swift */,
+				4C389A2B20EF2EC900E89E51 /* NetworkService.swift */,
 				4C3899FA20EF29E900E89E51 /* Main.storyboard */,
 				4C3899FD20EF29E900E89E51 /* Assets.xcassets */,
 				4C3899FF20EF29E900E89E51 /* LaunchScreen.storyboard */,
@@ -110,8 +122,8 @@
 		4C389A0A20EF29E900E89E51 /* CryptoCurrencyTests */ = {
 			isa = PBXGroup;
 			children = (
-				4C389A0B20EF29E900E89E51 /* CryptoCurrencyTests.swift */,
 				4C389A0D20EF29E900E89E51 /* Info.plist */,
+				4C389A2F20EF34AE00E89E51 /* CurrencyViewModelTests.swift */,
 			);
 			path = CryptoCurrencyTests;
 			sourceTree = "<group>";
@@ -196,6 +208,7 @@
 					};
 					4C389A0620EF29E900E89E51 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = 4C3899F220EF29E800E89E51;
 					};
 					4C389A1120EF29E900E89E51 = {
@@ -256,6 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C389A2C20EF2EC900E89E51 /* NetworkService.swift in Sources */,
+				4C389A2820EF2AE500E89E51 /* Currency.swift in Sources */,
+				4C389A2A20EF2E8400E89E51 /* CurrencyViewModel.swift in Sources */,
+				4C389A2E20EF31FF00E89E51 /* CurrencyFactory.swift in Sources */,
 				4C3899F920EF29E900E89E51 /* ViewController.swift in Sources */,
 				4C3899F720EF29E900E89E51 /* AppDelegate.swift in Sources */,
 			);
@@ -265,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C389A0C20EF29E900E89E51 /* CryptoCurrencyTests.swift in Sources */,
+				4C389A3020EF34AE00E89E51 /* CurrencyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +484,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38DEJUL48H;
 				INFOPLIST_FILE = CryptoCurrencyTests/Info.plist;
@@ -477,6 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativemic.CryptoCurrencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoCurrency.app/CryptoCurrency";
@@ -488,6 +507,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38DEJUL48H;
 				INFOPLIST_FILE = CryptoCurrencyTests/Info.plist;
