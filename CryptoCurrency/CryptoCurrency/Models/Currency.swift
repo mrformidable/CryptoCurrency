@@ -14,17 +14,5 @@ struct Currency {
     var marketPrice: Double
 }
 
-struct CurrencyNames {
-    static let bitcoin = "Bitcoin"
-    static let ripple = "Ripple"
-    static let erethereum = "Erethereum"
-}
-
-struct CurrencySymbols {
-    static let bitcoin = "BTC"
-    static let ripple = "XRP"
-    static let erethereum = "ERT"
-}
-
 
 

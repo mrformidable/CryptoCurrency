@@ -43,8 +43,8 @@ class CurrencyViewModelTests: XCTestCase {
                 currencies = _currencies
             }
             expection.fulfill()
-            
         }
+        
         wait(for: [expection], timeout: 5)
         XCTAssertTrue(currencies.count > 0)
     }
