@@ -19,6 +19,8 @@ final class PortfolioViewController: UIViewController {
     var assets: [Asset] = []
     var currency: Currency?
     
+    private let userDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +38,69 @@ final class PortfolioViewController: UIViewController {
         }
         
         navigationItem.title = currency?.name
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addObservers()
+        setupThemeColor()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeObservers()
+    }
+    
+}
+
+//MARK:- Obervers
+extension PortfolioViewController {
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleDarkModeSelection), name: .darkModeEnabled, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleDayThemeSelection), name: .darkModeDisabled, object: nil)
+    }
+    
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self, name: .darkModeEnabled, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .darkModeDisabled, object: nil)
+    }
+}
+
+//MARK:- ThemeColor Appereance Change
+extension PortfolioViewController {
+    private func setupThemeColor() {
+        guard let isDarkTheme = userDefaults.value(forKey: "theme") as? Bool else {
+            lightTheme()
+            return
+        }
+        isDarkTheme ? darkTheme() : lightTheme()
+    }
+    
+    @objc func handleDayThemeSelection() {
+        lightTheme()
+    }
+    
+    @objc func handleDarkModeSelection() {
+        darkTheme()
+    }
+    
+    func lightTheme() {
+        view.backgroundColor = UIColor.white
+        tableView.backgroundColor = UIColor.white
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.view.backgroundColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.tintColor = .black
+        removeNavigationBarSeparator(true)
+    }
+    
+    func darkTheme() {
+        view.backgroundColor = UIColor.black
+        tableView.backgroundColor = UIColor.black
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.view.backgroundColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.tintColor = .white
+        removeNavigationBarSeparator(false)
     }
 }

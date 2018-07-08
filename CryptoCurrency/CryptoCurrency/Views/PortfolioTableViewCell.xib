@@ -79,8 +79,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="quantityLabel" destination="v0T-jz-8gy" id="rDf-fb-42x"/>
+                <outlet property="returnLabel" destination="Xff-Am-3NF" id="jY8-W7-2kU"/>
                 <outlet property="returnValueLabel" destination="uKJ-19-Vrn" id="bLn-f8-x2w"/>
                 <outlet property="statisticsView" destination="0nt-a5-lvB" id="FpT-J2-Vqk"/>
+                <outlet property="totalHoldingsLabel" destination="kYl-hI-biL" id="SNq-Np-6n9"/>
                 <outlet property="valueLabel" destination="qfe-ay-N8m" id="GhY-bL-Bib"/>
             </connections>
             <point key="canvasLocation" x="143" y="204.5"/>

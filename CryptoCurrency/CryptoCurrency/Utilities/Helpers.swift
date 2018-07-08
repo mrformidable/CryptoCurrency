@@ -42,10 +42,24 @@ extension UIView {
 
 extension Notification.Name {
     static var handleCurrencySelection: Notification.Name {
-        return .init("CurrencySelected")
+        return .init("com.creative.CryptoCurrency.notifications.currencySelection")
+    }
+    
+    static var darkModeEnabled: Notification.Name {
+        return .init("com.creative.CryptoCurrency.notifications.darkModeEnabled")
+    }
+    
+    static var darkModeDisabled: Notification.Name {
+        return .init("com.creative.CryptoCurrency.notifications.darkModeDisabled")
     }
 }
 
+
+extension UIViewController {
+    func removeNavigationBarSeparator(_ remove: Bool) {
+        navigationController?.navigationBar.setValue(remove, forKey: "hidesShadow")
+    }
+}
 
 extension UIColor {
     static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {

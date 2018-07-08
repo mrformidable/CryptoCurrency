@@ -31,8 +31,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iUk-C3-Sb0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Currencies" id="9Kk-mW-4IT"/>
+                    <navigationItem key="navigationItem" title="Currencies" id="9Kk-mW-4IT">
+                        <barButtonItem key="rightBarButtonItem" image="moon_icon_dark" id="U5C-k0-WMh">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="selectThemeButtonTapped:" destination="L4B-3j-u3m" id="Oy5-8R-be9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="selectThemeButton" destination="U5C-k0-WMh" id="Jpn-DH-P5C"/>
                         <outlet property="tableView" destination="xQv-JA-ofM" id="eCP-xd-4eL"/>
                         <segue destination="0Fv-0Y-YbK" kind="show" identifier="ShowPortfolioViewController" id="ojp-i0-fe8"/>
                     </connections>
@@ -91,4 +99,7 @@
             <point key="canvasLocation" x="176.80000000000001" y="49.925037481259373"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="moon_icon_dark" width="23" height="23"/>
+    </resources>
 </document>
