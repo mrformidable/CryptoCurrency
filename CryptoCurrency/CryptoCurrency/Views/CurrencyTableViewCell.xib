@@ -30,8 +30,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3q-Nc-547">
+                        <rect key="frame" x="71" y="17" width="8" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="1md-4f-gC5"/>
+                            <constraint firstAttribute="width" constant="8" id="FW2-2K-o7e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbt-L6-GCv">
-                        <rect key="frame" x="78" y="11" width="29" height="19.5"/>
+                        <rect key="frame" x="82" y="14" width="29" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -39,14 +49,16 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="fTn-xf-1nE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="60O-sh-Ajp"/>
-                    <constraint firstItem="EDS-Ex-0qM" firstAttribute="top" secondItem="Bbt-L6-GCv" secondAttribute="bottom" constant="13" id="7Bu-Lk-7Dd"/>
-                    <constraint firstItem="Bbt-L6-GCv" firstAttribute="leading" secondItem="fTn-xf-1nE" secondAttribute="trailing" constant="10.5" id="Jv6-UY-gC0"/>
+                    <constraint firstItem="Bbt-L6-GCv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="63J-zX-qlE"/>
+                    <constraint firstItem="e3q-Nc-547" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="7L4-ZB-Qeb"/>
+                    <constraint firstItem="Bbt-L6-GCv" firstAttribute="leading" secondItem="e3q-Nc-547" secondAttribute="trailing" constant="3" id="Cmq-B7-DPI"/>
+                    <constraint firstItem="EDS-Ex-0qM" firstAttribute="top" secondItem="Bbt-L6-GCv" secondAttribute="bottom" constant="16.5" id="I6g-Ob-73x"/>
+                    <constraint firstItem="e3q-Nc-547" firstAttribute="leading" secondItem="fTn-xf-1nE" secondAttribute="trailing" constant="3.5" id="NaD-Xd-kPg"/>
                     <constraint firstItem="fTn-xf-1nE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ns5-Qt-k5p"/>
                     <constraint firstItem="EDS-Ex-0qM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Ntf-Bz-KsP"/>
                     <constraint firstItem="EDS-Ex-0qM" firstAttribute="top" secondItem="fTn-xf-1nE" secondAttribute="bottom" constant="12.5" id="Vzn-fG-euP"/>
                     <constraint firstAttribute="bottom" secondItem="EDS-Ex-0qM" secondAttribute="bottom" constant="15" id="eT4-Xm-E0r"/>
                     <constraint firstAttribute="trailing" secondItem="EDS-Ex-0qM" secondAttribute="trailing" constant="181" id="u8i-br-nm7"/>
-                    <constraint firstItem="Bbt-L6-GCv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="x0R-MZ-Yee"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

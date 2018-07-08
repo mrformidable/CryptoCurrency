@@ -27,6 +27,21 @@
 		4C93F6A320F062BF00C5D3F7 /* CurrencyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93F6A220F062BF00C5D3F7 /* CurrencyCellViewModel.swift */; };
 		4C93F6A620F071DB00C5D3F7 /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C93F6A520F071DB00C5D3F7 /* LoadingIndicatorView.xib */; };
 		4C93F6A820F0730000C5D3F7 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93F6A720F0730000C5D3F7 /* LoadingIndicatorView.swift */; };
+		4CB92AA320F1217E00FF1583 /* CurrencyListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AA220F1217E00FF1583 /* CurrencyListViewControllerTests.swift */; };
+		4CB92AA920F1255900FF1583 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AA820F1255900FF1583 /* Asset.swift */; };
+		4CB92AAB20F125D000FF1583 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AAA20F125D000FF1583 /* PortfolioViewModel.swift */; };
+		4CB92AB020F1266300FF1583 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AAE20F1266300FF1583 /* PortfolioTableViewCell.swift */; };
+		4CB92AB120F1266300FF1583 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB92AAF20F1266300FF1583 /* PortfolioTableViewCell.xib */; };
+		4CB92AB320F129EB00FF1583 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AB220F129EB00FF1583 /* PortfolioViewController.swift */; };
+		4CB92AB520F1387800FF1583 /* PortfolioDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AB420F1387800FF1583 /* PortfolioDataSource.swift */; };
+		4CB92AB720F13FF500FF1583 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AB620F13FF500FF1583 /* Constants.swift */; };
+		4CB92AB920F1451600FF1583 /* PortfolioDelegateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92AB820F1451600FF1583 /* PortfolioDelegateSource.swift */; };
+		4CB92ABB20F14D5200FF1583 /* PortfolioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92ABA20F14D5200FF1583 /* PortfolioCellViewModel.swift */; };
+		4CB92ABD20F16A4F00FF1583 /* PortfolioAssetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92ABC20F16A4F00FF1583 /* PortfolioAssetFactory.swift */; };
+		4CB92ABF20F173DD00FF1583 /* PortfolioAssetGeneratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB92ABE20F173DD00FF1583 /* PortfolioAssetGeneratorService.swift */; };
+		4CFBB8F420F1DA930095FF2F /* CircularProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBB8F320F1DA930095FF2F /* CircularProgessBar.swift */; };
+		4CFBB8F620F1DB250095FF2F /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBB8F520F1DB250095FF2F /* AnimatedLabel.swift */; };
+		4CFE31C220F253BF001B08A0 /* PortfolioViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE31C120F253BF001B08A0 /* PortfolioViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +88,21 @@
 		4C93F6A220F062BF00C5D3F7 /* CurrencyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellViewModel.swift; sourceTree = "<group>"; };
 		4C93F6A520F071DB00C5D3F7 /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
 		4C93F6A720F0730000C5D3F7 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		4CB92AA220F1217E00FF1583 /* CurrencyListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewControllerTests.swift; sourceTree = "<group>"; };
+		4CB92AA820F1255900FF1583 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		4CB92AAA20F125D000FF1583 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		4CB92AAE20F1266300FF1583 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		4CB92AAF20F1266300FF1583 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
+		4CB92AB220F129EB00FF1583 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		4CB92AB420F1387800FF1583 /* PortfolioDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataSource.swift; sourceTree = "<group>"; };
+		4CB92AB620F13FF500FF1583 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4CB92AB820F1451600FF1583 /* PortfolioDelegateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDelegateSource.swift; sourceTree = "<group>"; };
+		4CB92ABA20F14D5200FF1583 /* PortfolioCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCellViewModel.swift; sourceTree = "<group>"; };
+		4CB92ABC20F16A4F00FF1583 /* PortfolioAssetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAssetFactory.swift; sourceTree = "<group>"; };
+		4CB92ABE20F173DD00FF1583 /* PortfolioAssetGeneratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAssetGeneratorService.swift; sourceTree = "<group>"; };
+		4CFBB8F320F1DA930095FF2F /* CircularProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgessBar.swift; sourceTree = "<group>"; };
+		4CFBB8F520F1DB250095FF2F /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
+		4CFE31C120F253BF001B08A0 /* PortfolioViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +158,9 @@
 				4C93F69720F01F1C00C5D3F7 /* ViewModels */,
 				4C93F69420F01EF100C5D3F7 /* Networking */,
 				4C93F6A420F064AD00C5D3F7 /* Views */,
-				4C389A2D20EF31FF00E89E51 /* CurrencyFactory.swift */,
-				4C93F69E20F0577900C5D3F7 /* Helpers.swift */,
-				4C3899F620EF29E900E89E51 /* AppDelegate.swift */,
-				4C3899FA20EF29E900E89E51 /* Main.storyboard */,
-				4C3899FD20EF29E900E89E51 /* Assets.xcassets */,
-				4C3899FF20EF29E900E89E51 /* LaunchScreen.storyboard */,
+				4CB92AC020F1A77200FF1583 /* Factories */,
+				4CB92AC120F1A78200FF1583 /* Utilities */,
+				4CB92AC220F1A7A300FF1583 /* Resources */,
 				4C389A0220EF29E900E89E51 /* Info.plist */,
 			);
 			path = CryptoCurrency;
@@ -144,6 +171,8 @@
 			children = (
 				4C389A0D20EF29E900E89E51 /* Info.plist */,
 				4C389A2F20EF34AE00E89E51 /* CurrencyViewModelTests.swift */,
+				4CB92AA220F1217E00FF1583 /* CurrencyListViewControllerTests.swift */,
+				4CFE31C120F253BF001B08A0 /* PortfolioViewControllerTests.swift */,
 			);
 			path = CryptoCurrencyTests;
 			sourceTree = "<group>";
@@ -162,6 +191,7 @@
 			children = (
 				4C389A2B20EF2EC900E89E51 /* NetworkService.swift */,
 				4C0EBAD720EFA998002F88BF /* CryptoCurrency.swift */,
+				4CB92ABE20F173DD00FF1583 /* PortfolioAssetGeneratorService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,6 +202,9 @@
 				4C93F68E20F01CE000C5D3F7 /* CurrencyListViewController.swift */,
 				4C93F69220F01E3200C5D3F7 /* CurrencyListDataSource.swift */,
 				4C93F6A020F05E6300C5D3F7 /* CurrencyListDelegateSource.swift */,
+				4CB92AB220F129EB00FF1583 /* PortfolioViewController.swift */,
+				4CB92AB420F1387800FF1583 /* PortfolioDataSource.swift */,
+				4CB92AB820F1451600FF1583 /* PortfolioDelegateSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				4C389A2720EF2AE500E89E51 /* Currency.swift */,
+				4CB92AA820F1255900FF1583 /* Asset.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +223,8 @@
 			children = (
 				4C389A2920EF2E8400E89E51 /* CurrencyViewModel.swift */,
 				4C93F6A220F062BF00C5D3F7 /* CurrencyCellViewModel.swift */,
+				4CB92AAA20F125D000FF1583 /* PortfolioViewModel.swift */,
+				4CB92ABA20F14D5200FF1583 /* PortfolioCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -200,8 +236,41 @@
 				4C93F69B20F03B9700C5D3F7 /* CurrencyTableViewCell.xib */,
 				4C93F6A520F071DB00C5D3F7 /* LoadingIndicatorView.xib */,
 				4C93F6A720F0730000C5D3F7 /* LoadingIndicatorView.swift */,
+				4CB92AAE20F1266300FF1583 /* PortfolioTableViewCell.swift */,
+				4CB92AAF20F1266300FF1583 /* PortfolioTableViewCell.xib */,
+				4CFBB8F320F1DA930095FF2F /* CircularProgessBar.swift */,
+				4CFBB8F520F1DB250095FF2F /* AnimatedLabel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4CB92AC020F1A77200FF1583 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				4C389A2D20EF31FF00E89E51 /* CurrencyFactory.swift */,
+				4CB92ABC20F16A4F00FF1583 /* PortfolioAssetFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		4CB92AC120F1A78200FF1583 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4C93F69E20F0577900C5D3F7 /* Helpers.swift */,
+				4CB92AB620F13FF500FF1583 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4CB92AC220F1A7A300FF1583 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C3899F620EF29E900E89E51 /* AppDelegate.swift */,
+				4C3899FA20EF29E900E89E51 /* Main.storyboard */,
+				4C3899FF20EF29E900E89E51 /* LaunchScreen.storyboard */,
+				4C3899FD20EF29E900E89E51 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +380,7 @@
 			files = (
 				4C93F69D20F03B9700C5D3F7 /* CurrencyTableViewCell.xib in Resources */,
 				4C389A0120EF29E900E89E51 /* LaunchScreen.storyboard in Resources */,
+				4CB92AB120F1266300FF1583 /* PortfolioTableViewCell.xib in Resources */,
 				4C93F6A620F071DB00C5D3F7 /* LoadingIndicatorView.xib in Resources */,
 				4C3899FE20EF29E900E89E51 /* Assets.xcassets in Resources */,
 				4C3899FC20EF29E900E89E51 /* Main.storyboard in Resources */,
@@ -339,18 +409,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C93F6A820F0730000C5D3F7 /* LoadingIndicatorView.swift in Sources */,
+				4CB92AB720F13FF500FF1583 /* Constants.swift in Sources */,
 				4C389A2C20EF2EC900E89E51 /* NetworkService.swift in Sources */,
 				4C93F6A320F062BF00C5D3F7 /* CurrencyCellViewModel.swift in Sources */,
+				4CB92AB520F1387800FF1583 /* PortfolioDataSource.swift in Sources */,
 				4C389A2820EF2AE500E89E51 /* Currency.swift in Sources */,
+				4CB92AB920F1451600FF1583 /* PortfolioDelegateSource.swift in Sources */,
 				4C93F68F20F01CE000C5D3F7 /* CurrencyListViewController.swift in Sources */,
 				4C93F69F20F0577900C5D3F7 /* Helpers.swift in Sources */,
+				4CB92ABF20F173DD00FF1583 /* PortfolioAssetGeneratorService.swift in Sources */,
 				4C93F6A120F05E6400C5D3F7 /* CurrencyListDelegateSource.swift in Sources */,
 				4C389A2A20EF2E8400E89E51 /* CurrencyViewModel.swift in Sources */,
+				4CB92AB020F1266300FF1583 /* PortfolioTableViewCell.swift in Sources */,
+				4CB92ABB20F14D5200FF1583 /* PortfolioCellViewModel.swift in Sources */,
 				4C93F69320F01E3200C5D3F7 /* CurrencyListDataSource.swift in Sources */,
+				4CFBB8F620F1DB250095FF2F /* AnimatedLabel.swift in Sources */,
 				4C0EBAD820EFA998002F88BF /* CryptoCurrency.swift in Sources */,
+				4CFBB8F420F1DA930095FF2F /* CircularProgessBar.swift in Sources */,
+				4CB92AA920F1255900FF1583 /* Asset.swift in Sources */,
+				4CB92ABD20F16A4F00FF1583 /* PortfolioAssetFactory.swift in Sources */,
 				4C389A2E20EF31FF00E89E51 /* CurrencyFactory.swift in Sources */,
 				4C93F69C20F03B9700C5D3F7 /* CurrencyTableViewCell.swift in Sources */,
 				4C3899F720EF29E900E89E51 /* AppDelegate.swift in Sources */,
+				4CB92AAB20F125D000FF1583 /* PortfolioViewModel.swift in Sources */,
+				4CB92AB320F129EB00FF1583 /* PortfolioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +440,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFE31C220F253BF001B08A0 /* PortfolioViewControllerTests.swift in Sources */,
 				4C389A3020EF34AE00E89E51 /* CurrencyViewModelTests.swift in Sources */,
+				4CB92AA320F1217E00FF1583 /* CurrencyListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

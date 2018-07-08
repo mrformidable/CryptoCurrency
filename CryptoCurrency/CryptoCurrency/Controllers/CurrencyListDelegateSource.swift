@@ -10,10 +10,13 @@ import Foundation
 import UIKit
 
 
-class CurrencyListDelegateSource: NSObject {}
-
+final class CurrencyListDelegateSource: NSObject {}
 
 extension CurrencyListDelegateSource: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: .handleCurrencySelection, object: indexPath)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }

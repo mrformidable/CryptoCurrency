@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 enum CryptoCurrency {
    
     struct Bitcoin {

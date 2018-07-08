@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CurrencyListDataSource: NSObject {
+final class CurrencyListDataSource: NSObject {
     var currencies: [Currency] = []
 }
 

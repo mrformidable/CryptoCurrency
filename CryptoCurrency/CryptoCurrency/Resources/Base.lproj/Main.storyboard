@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Currency-->
+        <!--Currencies-->
         <scene sceneID="xEe-ia-7DB">
             <objects>
-                <viewController id="L4B-3j-u3m" customClass="CurrencyListViewController" customModule="CryptoCurrency" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrencyListViewController" id="L4B-3j-u3m" customClass="CurrencyListViewController" customModule="CryptoCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="28F-ai-hDx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,14 +31,45 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iUk-C3-Sb0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Currency" id="9Kk-mW-4IT"/>
+                    <navigationItem key="navigationItem" title="Currencies" id="9Kk-mW-4IT"/>
                     <connections>
                         <outlet property="tableView" destination="xQv-JA-ofM" id="eCP-xd-4eL"/>
+                        <segue destination="0Fv-0Y-YbK" kind="show" identifier="ShowPortfolioViewController" id="ojp-i0-fe8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8a-KU-Wjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="932" y="49.925037481259373"/>
+        </scene>
+        <!--Portfolio View Controller-->
+        <scene sceneID="igr-ri-MVk">
+            <objects>
+                <viewController storyboardIdentifier="PortfolioViewController" id="0Fv-0Y-YbK" customClass="PortfolioViewController" customModule="CryptoCurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtq-V2-rT3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="15V-OY-7pM">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="15V-OY-7pM" firstAttribute="bottom" secondItem="H3w-q7-5Ls" secondAttribute="bottom" id="XhS-WA-Ep9"/>
+                            <constraint firstItem="15V-OY-7pM" firstAttribute="trailing" secondItem="H3w-q7-5Ls" secondAttribute="trailing" id="eSf-9v-gNK"/>
+                            <constraint firstItem="15V-OY-7pM" firstAttribute="leading" secondItem="H3w-q7-5Ls" secondAttribute="leading" id="sQy-NA-dFA"/>
+                            <constraint firstItem="15V-OY-7pM" firstAttribute="top" secondItem="H3w-q7-5Ls" secondAttribute="top" id="tlw-gZ-kc5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H3w-q7-5Ls"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="15V-OY-7pM" id="ACt-M2-bZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLX-of-Fbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="49.925037481259373"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BTJ-Qo-iL4">
@@ -48,6 +79,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OvL-id-oX3">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

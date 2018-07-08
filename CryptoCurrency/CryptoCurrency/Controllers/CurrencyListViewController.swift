@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CurrencyListViewController: UIViewController {
+final class CurrencyListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,7 +30,7 @@ class CurrencyListViewController: UIViewController {
         loadingIndicatorView.center = view.center
         loadingIndicatorView.activityIndicator.startAnimating()
         
-        viewModel.fetchCurrencies { [weak self](currencies) in
+        viewModel.fetchCurrencies { [weak self] (currencies) in
             if let currencies = currencies {
                 self?.dataSource.currencies = currencies
                 DispatchQueue.main.async {
@@ -41,6 +41,32 @@ class CurrencyListViewController: UIViewController {
                 }
             }
         }
+        addObservers()
+    }
+    
+    @objc private func handleCurrencySelection(_ notification: Notification) {
+        let indexPath = notification.object as? IndexPath
+        performSegue(withIdentifier: Constants.SegueIdentifiers.showPortfolioController, sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.SegueIdentifiers.showPortfolioController {
+            guard let portfolioViewController = segue.destination as? PortfolioViewController else {
+                fatalError("Failed to instantiate PortfolioViewController")
+            }
+            if let indexPath = sender as? IndexPath {
+                let currency = dataSource.currencies[indexPath.row]
+                portfolioViewController.currency = currency
+            }
+        }
     }
     
 }
+
+// MARK:- Observers
+extension CurrencyListViewController {
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCurrencySelection(_:)), name: .handleCurrencySelection, object: nil)
+    }
+}
+

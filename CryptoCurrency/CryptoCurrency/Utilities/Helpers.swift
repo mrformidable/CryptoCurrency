@@ -39,3 +39,16 @@ extension UIView {
         return Bundle.main.loadNibNamed(className, owner: self, options: nil)?.first as! T
     }
 }
+
+extension Notification.Name {
+    static var handleCurrencySelection: Notification.Name {
+        return .init("CurrencySelected")
+    }
+}
+
+
+extension UIColor {
+    static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
+        return UIColor(red: red / 255, green: green / 255, blue: blue / 255, alpha: 1)
+    }
+}

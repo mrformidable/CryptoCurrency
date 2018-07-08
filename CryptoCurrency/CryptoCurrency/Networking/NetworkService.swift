@@ -15,7 +15,7 @@ protocol NetworkService {
 struct CurrencyNetworkService: NetworkService {
     func loadCurrencies(_ completion: @escaping ([Currency]?) -> Void) {
         // Fake Network
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 2) {
             let bitcoin = CurrencyFactory.createCurrency(name: CryptoCurrency.Bitcoin.name, symbol: CryptoCurrency.Bitcoin.symbol, marketPrice: 6555.98)
             let ripple = CurrencyFactory.createCurrency(name: CryptoCurrency.Ripple.name, symbol: CryptoCurrency.Ripple.symbol, marketPrice: 0.471470)
             let ethereum = CurrencyFactory.createCurrency(name: CryptoCurrency.Ethereum.name, symbol: CryptoCurrency.Ethereum.symbol, marketPrice: 471.85)
