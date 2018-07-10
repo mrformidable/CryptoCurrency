@@ -12,4 +12,7 @@ enum Constants {
     struct SegueIdentifiers {
         static let showPortfolioController = "ShowPortfolioViewController"
     }
+    struct UserDefaultKeys {
+        static let themeAppearanceKey = "theme"
+    }
 }

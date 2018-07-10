@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-final class CircularProgressBar: CALayer {
+class CircularProgressBar: CALayer {
     
     private var circularPath: UIBezierPath!
     private var innerTrackShapeLayer: CAShapeLayer!
     private var outerTrackShapeLayer: CAShapeLayer!
     private let rotateTransformation = CATransform3DMakeRotation(-.pi / 2, 0, 0, 1)
-    var progressLabel: AnimatedLabel!
     private var animationDuration: TimeInterval!
-    
+    var progressLabel: AnimatedLabel!
+
     public init(radius: CGFloat, position: CGPoint, innerTrackColor: UIColor, outerTrackColor: UIColor, lineWidth: CGFloat, animationDuration: TimeInterval) {
         super.init()
         

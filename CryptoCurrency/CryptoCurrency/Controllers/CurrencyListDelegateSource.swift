@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 final class CurrencyListDelegateSource: NSObject {}
 
 extension CurrencyListDelegateSource: UITableViewDelegate {

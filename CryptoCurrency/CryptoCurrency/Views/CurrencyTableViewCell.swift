@@ -9,7 +9,7 @@
 import UIKit
 
 class CurrencyTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var separatorDot: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -27,22 +27,25 @@ class CurrencyTableViewCell: UITableViewCell {
     }
     
     private func handleThemeAppearance() {
-        let isDarkTheme = UserDefaults.standard.value(forKey: "theme") as? Bool ?? false
-        if isDarkTheme {
-            nameLabel.textColor = .white
-            priceLabel.textColor = .white
-            separatorDot.textColor = .white
-            backgroundColor = .black
-        } else {
-            nameLabel.textColor = .black
-            priceLabel.textColor = .black
-            separatorDot.textColor = .black
-            backgroundColor = .white
-        }
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        let isDarkTheme = UserDefaults.standard.value(forKey: Constants.UserDefaultKeys.themeAppearanceKey) as? Bool ?? false
+        isDarkTheme ? handleDarkTheme() : handleLightTheme()
     }
     
+}
+
+//MARK: - ThemeColor Appearance
+private extension CurrencyTableViewCell {
+    func handleDarkTheme() {
+        nameLabel.textColor = .white
+        priceLabel.textColor = .white
+        separatorDot.textColor = .white
+        backgroundColor = .black
+    }
+    
+    func handleLightTheme() {
+        nameLabel.textColor = .black
+        priceLabel.textColor = .black
+        separatorDot.textColor = .black
+        backgroundColor = .white
+    }
 }

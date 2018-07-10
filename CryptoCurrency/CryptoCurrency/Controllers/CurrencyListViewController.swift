@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class CurrencyListViewController: UIViewController {
+class CurrencyListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -60,20 +60,20 @@ final class CurrencyListViewController: UIViewController {
         removeObservers()
     }
 
-    //MARK:- Actions
+    //MARK: - Actions
     @IBAction func selectThemeButtonTapped(_ sender: UIBarButtonItem) {
-        isDarkTheme = userDefaults.value(forKey: "theme") as? Bool ?? false
+        isDarkTheme = userDefaults.value(forKey: Constants.UserDefaultKeys.themeAppearanceKey) as? Bool ?? false
         NotificationCenter.default.post(name: isDarkTheme ? .darkModeDisabled : .darkModeEnabled, object: nil)
         
         isDarkTheme = !isDarkTheme
-        userDefaults.set(isDarkTheme, forKey: "theme")
+        userDefaults.set(isDarkTheme, forKey: Constants.UserDefaultKeys.themeAppearanceKey)
         userDefaults.synchronize()
         tableView.reloadData()
     }
     
 }
 
-// MARK:- Segues
+// MARK: - Segues
 extension CurrencyListViewController {
     @objc private func handleCurrencySelection(_ notification: Notification) {
         let indexPath = notification.object as? IndexPath
@@ -93,7 +93,7 @@ extension CurrencyListViewController {
     }
 }
 
-// MARK:- Observers
+// MARK: - Observers
 extension CurrencyListViewController {
     private func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleCurrencySelection(_:)), name: .handleCurrencySelection, object: nil)
@@ -110,10 +110,10 @@ extension CurrencyListViewController {
 
 //Note: ThemeColor change is a naive approach, only to illustrate and enhance UI, clearly this approach is not testable or reusable
 // Ideally the view model should handle changes in state such as apperance
-//MARK:- HandleThemes
+//MARK: - HandleThemes
 extension CurrencyListViewController {
     private func setupThemeColor() {
-        guard let isDarkTheme = userDefaults.value(forKey: "theme") as? Bool else {
+        guard let isDarkTheme = userDefaults.value(forKey: Constants.UserDefaultKeys.themeAppearanceKey) as? Bool else {
             lightTheme()
             return
         }

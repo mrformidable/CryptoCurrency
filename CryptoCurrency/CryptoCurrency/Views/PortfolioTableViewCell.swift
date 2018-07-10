@@ -49,33 +49,37 @@ class PortfolioTableViewCell: UITableViewCell {
         animatePortfolioStatistics(to: percentage)
     }
     
-}
-
-//MARK:- ThemeColor Apperance
-extension PortfolioTableViewCell {
     private func handleThemeAppearance() {
-        let isDarkTheme = UserDefaults.standard.value(forKey: "theme") as? Bool ?? false
-        if isDarkTheme {
-            themeTextColor = .white
-            themeProgressOuterTrackColor = .rgb(45,45,45)
-            themeSubtitleTextColor = .lightGray
-            totalHoldingsLabel.textColor = .lightGray
-            returnLabel.textColor = .white
-            themePositiveReturnValueColor = .rgb(10,225,0)
-            backgroundColor = .black
-        } else {
-            themeTextColor = .black
-            themeProgressOuterTrackColor = .lightGray
-            themeSubtitleTextColor = .gray
-            totalHoldingsLabel.textColor = .gray
-            returnLabel.textColor = .black
-            themePositiveReturnValueColor = .rgb(0,143,0)
-            backgroundColor = .white
-        }
+        let isDarkTheme = UserDefaults.standard.value(forKey: Constants.UserDefaultKeys.themeAppearanceKey) as? Bool ?? false
+        isDarkTheme ? handleDarkTheme() : handleLightTheme()
     }
 }
 
-extension PortfolioTableViewCell {
+//MARK: - ThemeColor Apperance
+private extension PortfolioTableViewCell {    
+    private func handleDarkTheme() {
+        themeTextColor = .white
+        themeProgressOuterTrackColor = .rgb(45,45,45)
+        themeSubtitleTextColor = .lightGray
+        totalHoldingsLabel.textColor = .lightGray
+        returnLabel.textColor = .white
+        themePositiveReturnValueColor = .rgb(10,225,0)
+        backgroundColor = .black
+    }
+    
+    private func handleLightTheme() {
+        themeTextColor = .black
+        themeProgressOuterTrackColor = .lightGray
+        themeSubtitleTextColor = .gray
+        totalHoldingsLabel.textColor = .gray
+        returnLabel.textColor = .black
+        themePositiveReturnValueColor = .rgb(0,143,0)
+        backgroundColor = .white
+    }
+    
+}
+
+private extension PortfolioTableViewCell {
     func calculatePortfolioReturn(_ viewModel: PortfolioCellViewModel) -> Double {
         let purchaseCost = viewModel.purchasePrice * Double(viewModel.quantity)
         let marketValue = viewModel.currency.marketPrice * Double(viewModel.quantity)
@@ -84,16 +88,17 @@ extension PortfolioTableViewCell {
     }
 }
 
-//MARK:- Setups
-extension PortfolioTableViewCell {
-    private func setupValueLabel(_ text: String) -> NSAttributedString {
+//MARK: - Setups
+private extension PortfolioTableViewCell {
+    func setupValueLabel(_ text: String) -> NSAttributedString {
         return createAttributedText(withTitle: text, subtitle: "Est. Value", titleFontSize: 18, descriptionFontSize: 14, titleColor: themeTextColor, descriptionColor: themeSubtitleTextColor)
     }
-    private func setupQuantityLabel(_ text: String, symbol: String) -> NSAttributedString {
+    
+    func setupQuantityLabel(_ text: String, symbol: String) -> NSAttributedString {
         return createAttributedText(withTitle: text, subtitle: symbol, titleFontSize: 18, descriptionFontSize: 14, titleColor: themeTextColor, descriptionColor: themeSubtitleTextColor)
     }
     
-    private func animatePortfolioStatistics(to value: Double) {
+    func animatePortfolioStatistics(to value: Double) {
         let xPosition = statisticsView.center.x + 6
         let yPosition = statisticsView.center.y
         let position = CGPoint(x: xPosition, y: yPosition)
@@ -106,8 +111,8 @@ extension PortfolioTableViewCell {
     }
 }
 
-//MARK:- Helpers
-extension PortfolioTableViewCell {
+//MARK: - Helpers
+private extension PortfolioTableViewCell {
     func createAttributedText(withTitle title: String, subtitle: String, titleFontSize: CGFloat, descriptionFontSize: CGFloat, titleColor: UIColor, descriptionColor: UIColor) -> NSAttributedString {
         
         let attributedText = NSMutableAttributedString(string: title, attributes: [NSAttributedString.Key.font:  UIFont.systemFont(ofSize: titleFontSize, weight: UIFont.Weight.heavy), NSAttributedString.Key.foregroundColor: titleColor])

@@ -31,4 +31,6 @@ class PortfolioViewControllerTests: XCTestCase {
     func test_afterViewLoads_setsDelegateSource() {
         XCTAssertTrue(sut.tableView.delegate is PortfolioDelegateSource)
     }
+    
+    
 }

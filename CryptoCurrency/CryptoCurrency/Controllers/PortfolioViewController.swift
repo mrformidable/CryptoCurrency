@@ -53,7 +53,7 @@ final class PortfolioViewController: UIViewController {
     
 }
 
-//MARK:- Obervers
+//MARK: - Obervers
 extension PortfolioViewController {
     private func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleDarkModeSelection), name: .darkModeEnabled, object: nil)
@@ -69,7 +69,7 @@ extension PortfolioViewController {
 //MARK:- ThemeColor Appereance Change
 extension PortfolioViewController {
     private func setupThemeColor() {
-        guard let isDarkTheme = userDefaults.value(forKey: "theme") as? Bool else {
+        guard let isDarkTheme = userDefaults.value(forKey: Constants.UserDefaultKeys.themeAppearanceKey) as? Bool else {
             lightTheme()
             return
         }

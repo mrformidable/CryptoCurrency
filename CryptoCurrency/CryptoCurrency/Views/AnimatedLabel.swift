@@ -50,7 +50,7 @@ enum SuffixLabel: String {
 typealias OptionalCallback = (() -> Void)
 typealias OptionalFormatBlock = (() -> String)
 
-final class AnimatedLabel: UILabel {
+class AnimatedLabel: UILabel {
     var completion: OptionalCallback?
     var animationDuration: AnimationDuration = .brisk
     var decimalPoints: DecimalPoints = .zero
