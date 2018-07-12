@@ -31,8 +31,9 @@ class CurrencyListViewController: UIViewController {
         tableView.delegate = delegateSource
         tableView.register(.nib, type: CurrencyTableViewCell.self)
         
-        view.addSubview(loadingIndicatorView)
-        loadingIndicatorView.center = view.center
+        let keywindow = UIApplication.shared.keyWindow
+        keywindow?.addSubview(loadingIndicatorView)
+        loadingIndicatorView.center = keywindow?.center ?? view.center
         loadingIndicatorView.activityIndicator.startAnimating()
         
         viewModel.fetchCurrencies { [weak self] (currencies) in

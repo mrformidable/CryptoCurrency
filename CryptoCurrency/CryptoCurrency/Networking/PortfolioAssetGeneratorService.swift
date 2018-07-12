@@ -19,7 +19,7 @@ struct PortfolioAssetGeneratorService: PortfolioAssetCreatable {
         var quantity = 0
         
         if CryptoCurrency.Bitcoin.name == currency.name {
-            purchasePrice = 6100.28
+            purchasePrice = 5100.28
             quantity = 5
         } else if CryptoCurrency.Ethereum.name == currency.name {
             purchasePrice = 474.85
