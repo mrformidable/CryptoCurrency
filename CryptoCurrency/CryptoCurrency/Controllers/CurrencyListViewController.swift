@@ -47,6 +47,7 @@ class CurrencyListViewController: UIViewController {
                 }
             }
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

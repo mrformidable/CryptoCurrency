@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CircularProgressBar: CALayer {
+public class CircularProgressBar: CALayer {
     
     private var circularPath: UIBezierPath!
     private var innerTrackShapeLayer: CAShapeLayer!

@@ -66,7 +66,7 @@ class CurrencyListDataSourceTests: XCTestCase {
         sut.currencies.append(Currency(name: "Currency Test", symbol: "abc", marketPrice: 1.0))
         mockTableView.reloadData()
         
-        _ = mockTableView.cellForRow(at: IndexPath.init(row: 0, section: 0))
+        mockTableView.cellForRow(at: IndexPath.init(row: 0, section: 0))
         
         XCTAssertTrue(mockTableView.dequeueCalled)
     }
@@ -87,7 +87,6 @@ class CurrencyListDataSourceTests: XCTestCase {
     }
     
 }
-
 
 extension CurrencyListDataSourceTests {
     class MockTableView: UITableView {
